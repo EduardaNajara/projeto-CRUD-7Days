@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --fundo: #ffffff;
+    --fundo-escuro: #d3ecef;
+    --fundo-claro: #e8f8f8;
+    --fonte-escuro: #559bad;
+    --fonte-claro: #95bfd2;
+    --fonte: 'Poppins';
+    --fonte-secundaria: 'Josefin Sans';
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--fonte-claro);
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cabecalho {
+    background-color: var(--fundo-claro);
+    margin: 0;
+    padding: 1em 5em;
+}
+
+.cabecalho-titulo {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-secundaria);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6em 0;
+}
+
+.formulario-tabela {
+    padding: 2em 3em;
+    background-color: var(--fundo-escuro);
+    border-radius: 1em;
+    box-shadow: 4px 4px 8px #00000010;
+}
+
+.formulario-titulo {
+    color: var(--fonte-escuro);
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 2em;
+}
+
+.formulario-item {
+    color: var(--fonte-escuro);
+    margin-right: 1em;
+}
+
+.form-field {
+    border-radius: 1em;
+    border: 1 solid var(--fonte-escuro);
+    background-color: var(--fundo);
+    color: var(--fonte-escuro);
+    padding: 0 1em;
+    margin: 1em;
+}
+
+.formulario-butao {
+    background-color: var(--fonte-escuro);
+    border: none;
+    border-radius: 1em;
+    color: var(--fundo-escuro);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em 2em;
+    margin-left: 2em;
+    box-shadow: 2px 2px 4px #00000020;
+}
+
+.formulario-butao:hover {
+    background-color: var(--fonte-claro);
+    color: var(--fonte-escuro);
+    box-shadow: 4px 4px 8px #00000020;
+}

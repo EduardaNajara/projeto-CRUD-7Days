@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CRUD</title>
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho-titulo">CRUD básico - formulário</h1>
+    </header>
+    <section class="formulario">
+      <div class="formulario-tabela">
+        <h1 class="formulario-titulo">Cadastro de pessoas</h1>
+        <form class="form js-form">
+          <label for="name" class="formulario-item"
+            >Nome
+            <input
+              class="form-field js-field"
+              id="name"
+              minlength="3"
+              maxlength="26"
+              pattern="([a-zA-Z]+)"
+              name="name"
+              required
+              type="text"
+            />
+          </label>
+          <label for="birth-date" class="formulario-item"
+            >Data de Nascimento
+            <input
+              class="form-field js-field"
+              id="birth-date"
+              name="birth-date"
+              required
+              type="date"
+            />
+            <button type="submit" id="button" class="formulario-butao">Salvar</button>
+          </label>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script src="main.js"></script>
+</html>
