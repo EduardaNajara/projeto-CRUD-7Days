@@ -23,6 +23,9 @@
               class="form-field js-field"
               id="name"
               name="name"
+              type="text"
+              required
+              pattern="/^\S[A-Za-zÀ-ÖØ-öø-ÿ]+$/"
               placeholder="Digite o nome da pessoa aqui, por exemplo: Eduarda Najara"
             />
             <p class="message-error hide">Mensagem erro</p>
@@ -35,6 +38,11 @@
               class="form-field js-field"
               id="birth-date"
               name="birth-date"
+              type="datetime"
+              min="1900-01-01"
+              max="2015-12-31"
+              required
+              pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[12][0-9]{3}$"
               placeholder="Digite a data de nascimento da pessoa aqui, por exemplo: 23/01/2005"
             />
             <p class="message-error hide">Mensagem erro</p>
