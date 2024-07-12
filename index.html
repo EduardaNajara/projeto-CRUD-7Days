@@ -10,37 +10,51 @@
 
   <body>
     <header class="cabecalho">
-      <h1 class="cabecalho-titulo">CRUD básico - formulário</h1>
+      <h1 class="cabecalho-titulo">Agenda de Aniverśarios</h1>
     </header>
     <section class="formulario">
       <div class="formulario-tabela">
-        <h1 class="formulario-titulo">Cadastro de pessoas</h1>
         <form class="form js-form">
-          <label for="name" class="formulario-item"
-            >Nome
+          <label for="name" class="formulario-item">
+            <p class="formulario-titulo">
+              Nome da pessoa (<span class="light">campo obrigatório</span>)
+            </p>
             <input
               class="form-field js-field"
               id="name"
-              minlength="3"
-              maxlength="26"
-              pattern="([a-zA-Z]+)"
               name="name"
-              required
-              type="text"
+              placeholder="Digite o nome da pessoa aqui, por exemplo: Eduarda Najara"
             />
+            <p class="message-error hide">Mensagem erro</p>
           </label>
-          <label for="birth-date" class="formulario-item"
-            >Data de Nascimento
+          <label for="birth-date" class="formulario-item">
+            <p class="formulario-titulo">
+              Data de Nascimento (<span class="light">campo obrigatório</span>)
+            </p>
             <input
               class="form-field js-field"
               id="birth-date"
               name="birth-date"
-              required
-              type="date"
+              placeholder="Digite a data de nascimento da pessoa aqui, por exemplo: 23/01/2005"
             />
-            <button type="submit" id="button" class="formulario-butao">Salvar</button>
+            <p class="message-error hide">Mensagem erro</p>
           </label>
+          <button type="submit" id="button" class="formulario-botao">
+            Salvar
+          </button>
         </form>
+      </div>
+    </section>
+
+    <section class="formulario-tabela">
+      <div class="result">
+        <div class="titles hide">
+          <h2 class="title-name">Nomes</h2>
+          <h2 class="title-birth">Data de Nascimento</h2>
+          <h2 class="title-actions">Ações</h2>
+        </div>
+
+        <ul class="ul-result hide"></ul>
       </div>
     </section>
   </body>
