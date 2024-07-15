@@ -9,62 +9,55 @@
   </head>
 
   <body>
-    <header class="cabecalho">
-      <h1 class="cabecalho-titulo">Agenda de Aniverśarios</h1>
+    <header class="head">
+      <h1 class="head-title">Agenda de Aniverśarios</h1>
     </header>
-    <section class="formulario">
-      <div class="formulario-tabela">
+
+      <div class="form-table">
         <form class="form js-form">
-          <label for="name" class="formulario-item">
-            <p class="formulario-titulo">
+
+          <label for="name" class="form-item">
+            <p class="form-title">
               Nome da pessoa (<span class="light">campo obrigatório</span>)
             </p>
             <input
               class="form-field js-field"
               id="name"
               name="name"
-              type="text"
-              required
-              pattern="/^\S[A-Za-zÀ-ÖØ-öø-ÿ]+$/"
               placeholder="Digite o nome da pessoa aqui, por exemplo: Eduarda Najara"
             />
             <p class="message-error hide">Mensagem erro</p>
           </label>
-          <label for="birth-date" class="formulario-item">
-            <p class="formulario-titulo">
+
+          <label for="birth-date" class="form-item">
+            <p class="form-title">
               Data de Nascimento (<span class="light">campo obrigatório</span>)
             </p>
             <input
               class="form-field js-field"
               id="birth-date"
               name="birth-date"
-              type="datetime"
-              min="1900-01-01"
-              max="2015-12-31"
-              required
-              pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[12][0-9]{3}$"
               placeholder="Digite a data de nascimento da pessoa aqui, por exemplo: 23/01/2005"
             />
             <p class="message-error hide">Mensagem erro</p>
           </label>
-          <button type="submit" id="button" class="formulario-botao">
-            Salvar
-          </button>
+
+          <div class="buttons">
+            <button class="btn-submit" type="submit">Salvar</button>
+        </div>
+
         </form>
       </div>
-    </section>
 
-    <section class="formulario-tabela">
       <div class="result">
         <div class="titles hide">
           <h2 class="title-name">Nomes</h2>
           <h2 class="title-birth">Data de Nascimento</h2>
           <h2 class="title-actions">Ações</h2>
         </div>
-
         <ul class="ul-result hide"></ul>
       </div>
-    </section>
+
   </body>
   <script src="main.js"></script>
 </html>
