@@ -3,61 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>CRUD</title>
   </head>
 
   <body>
     <header class="head">
-      <h1 class="head-title">Agenda de Aniverśarios</h1>
+      <h1 class="head-title">Minha Agenda</h1>
     </header>
+
+    <main>
+      <div class="title">
+        <h2>Formulário</h2>
+        <span>Crie sua lista de aniversários.</span>
+      </div>
 
       <div class="form-table">
         <form class="form js-form">
-
-          <label for="name" class="form-item">
-            <p class="form-title">
-              Nome da pessoa (<span class="light">campo obrigatório</span>)
-            </p>
+          <div for="name" class="form-item">
+            <p class="form-title">Nome da Pessoa</p>
             <input
               class="form-field js-field"
+              type="text"
+              onfocus="this.placeholder=''"
               id="name"
-              name="name"
               placeholder="Digite o nome da pessoa aqui, por exemplo: Eduarda Najara"
             />
-            <p class="message-error hide">Mensagem erro</p>
-          </label>
+            <p class="message-error hide">Campo obrigatório!</p>
+          </div>
 
-          <label for="birth-date" class="form-item">
-            <p class="form-title">
-              Data de Nascimento (<span class="light">campo obrigatório</span>)
-            </p>
+          <div for="birth-date" class="form-item">
+            <p class="form-title">Data de Nascimento</p>
             <input
               class="form-field js-field"
+              type="text"
+              onfocus="this.type='date'"
               id="birth-date"
-              name="birth-date"
               placeholder="Digite a data de nascimento da pessoa aqui, por exemplo: 23/01/2005"
             />
-            <p class="message-error hide">Mensagem erro</p>
-          </label>
+            <p class="message-error hide">Campo obrigatório!</p>
+          </div>
 
           <div class="buttons">
-            <button class="btn-submit" type="submit">Salvar</button>
-        </div>
-
+            <button class="btn-submit" onclick="pessoa.salvar()">Salvar</button>
+            <button class="btn-clear" onclick="pessoa.cancelar()">Cancelar</button>
+          </div>
         </form>
       </div>
 
-      <div class="result">
-        <div class="titles hide">
-          <h2 class="title-name">Nomes</h2>
-          <h2 class="title-birth">Data de Nascimento</h2>
-          <h2 class="title-actions">Ações</h2>
-        </div>
-        <ul class="ul-result hide"></ul>
+      <div class="content">
+        <table>
+          <thead>
+              <th>Nome</th>
+              <th>Data de Nascimento</th>
+              <th>Ações</th>
+          </thead>
+          <tbody>
+              <td>Eduarda Najara</td>
+              <td>23/01/2005</td>
+              <td>
+                <img src="assets/edit.svg" alt="">
+                <img src="assets/delete.svg" alt="">
+              </td>
+          </tbody>
+        </table>
       </div>
-
+    </main>
   </body>
-  <script src="main.js"></script>
+  <script src="./js/main.js"></script>
 </html>
